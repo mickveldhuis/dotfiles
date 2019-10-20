@@ -12,6 +12,7 @@ These are my configuration files, at least those that do matter.
 6. Bash
 7. Rofi
 8. Kitty
+9. ZSH
 
 ## Screenshots
 
