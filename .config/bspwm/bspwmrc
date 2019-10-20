@@ -1,0 +1,55 @@
+#! /bin/sh
+
+# COLORS
+
+pinkish=#950068
+purplish=#710095
+reddish=#621100
+
+# KILL BEFORE AUTOSTART
+killall -s SIGKILL redshift
+
+# AUTOSTART
+compton &
+sxhkd &
+~/.config/polybar/launch.sh
+~/.fehbg &
+light-locker &
+redshift -l 53.22:6.57 &
+
+# BSPWM CONFIG
+
+# ------------------------ #
+# SETUP DEPENDENT SETTINGS #
+# ------------------------ #
+
+case "$DOTS_DEVICE_TYPE" in
+    PC) 
+        bspc monitor HDMI-1 -d I II III IV V 
+        bspc monitor DVI-I-1 -d VI VII VIII IX X
+        ;;
+    LAPTOP)
+        bspc monitor -d I II III IV V 
+        ;;
+    *) 
+        bspc monitor -d I II III IV V VI VII VIII IX X
+        ;;
+esac
+
+# -------------------------- #
+# SETUP INDEPENDENT SETTINGS #
+# -------------------------- #
+
+bspc config border_width         2
+bspc config window_gap           4
+
+bspc config normal_border_color  $reddish
+bspc config active_border_color  $pinkish
+bspc config focused_border_color $purplish
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Emacs state=tiled
+bspc rule -a Zathura state=tiled
