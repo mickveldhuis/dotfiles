@@ -1,0 +1,282 @@
+[colors]
+;background = #222
+background = #151718
+background-alt= #444
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #621100
+secondary = #e60053
+reboot = #950068
+suspend = #710095
+alert = #bd2c40
+
+[defaults]
+icon-size = 8
+
+[bar/leftbar]
+monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 27
+offset-x = 0%
+offset-y = 0%
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+;line-size = 3
+;line-color = #f00
+
+;border-bottom-size = 3
+;border-color = ${colors.primary}
+
+padding-left = 1
+padding-right = 0
+
+module-margin = 0
+;module-margin-right = 2
+
+font-0 = Monospace:pixelsize=12;1
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
+
+modules-left = bspwm 
+modules-center = xwindow 
+modules-right = memory cpu datetime
+
+;tray-position = right
+;tray-padding = 2
+;tray-background = #0063ff
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+wm-restack = bspwm
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/rightbar]
+monitor = ${env:MONITOR:DVI-I-1}
+width = 100%
+height = 27
+offset-x = 0%
+offset-y = 0%
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+;line-size = 3
+;line-color = #f00
+
+;border-bottom-size = 3
+;border-color = ${colors.primary}
+
+padding-left = 1
+padding-right = 1
+
+;module-margin-left = 2
+;module-margin-right = 2
+
+font-0 = Monospace:pixelsize=12;1
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
+
+modules-left = bspwm
+modules-center = xwindow
+modules-right = date suspend reboot poweroff 
+
+;tray-position = right
+;tray-padding = 2
+;tray-background = #0063ff
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+wm-restack = bspwm
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/singlebar]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 27
+offset-x = 0%
+offset-y = 0%
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+;line-size = 3
+;line-color = #f00
+
+;border-bottom-size = 3
+;border-color = ${colors.primary}
+
+;padding-left = 2
+;padding-right = 2
+
+module-margin = 0
+;module-margin-right = 2
+
+font-0 = Monospace:pixelsize=12;1
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
+
+modules-left = bspwm 
+;modules-center = xwindow 
+modules-right = memory cpu date batt suspend reboot poweroff
+
+;tray-position = right
+;tray-padding = 2
+;tray-background = #0063ff
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+wm-restack = bspwm
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/xwindow]
+type = internal/xwindow
+label = [ %title:0:30:...% ]
+
+[module/bspwm]
+type = internal/bspwm
+
+; ws-icon-0 = I;
+; ws-icon-1 = II;
+; ws-icon-2 = III;
+; ws-icon-3 = IV;
+; ws-icon-4 = V;
+; ws-icon-5 = VI;
+; ws-icon-6 = VII;
+; ws-icon-7 = VIII;
+; ws-icon-8 = IX;
+; ws-icon-9 = X; 
+; ws-icon-default = " "
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-8 = IX;
+ws-icon-9 = X; 
+ws-icon-default = " "
+
+
+; using %index% or %icon%
+label-focused = %icon%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+label-occupied = %icon%
+label-occupied-padding = 2
+
+label-urgent = %icon%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = %icon%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
+
+enable-scroll = true
+reverse-scroll = false
+
+; [module/check-updates]
+; type = custom/script
+; interval = 1000
+
+; exec = pacman -Qu | wc -l
+; click-left = pacman -Qu | wc -l
+
+; format-prefix = " "
+; label = %output%
+
+; format-margin = 2
+; format-padding = 1%
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+
+format-prefix = " " 
+label = CPU %percentage:3%%
+
+format-margin = 2
+
+[module/memory]
+type = internal/memory
+interval = 2
+
+format-prefix = " "
+;label = RAM %percentage_used%%
+label = MEM %percentage_used:3%%
+
+format-margin = 2
+
+[module/datetime]
+type = internal/date
+interval = 5
+
+date = "%Y-%m-%d"
+time = %H:%M
+
+format-prefix = " "
+label = %date% %time%
+
+format-margin = 2
+
+[module/date]
+type = internal/date
+interval = 5
+
+time = %H:%M
+
+format-prefix = " "
+label = %time%
+
+format-margin = 2
+
+[module/suspend]
+type = custom/script
+exec = echo 'Suspend'
+click-left = systemctl suspend
+label = ""
+format-background = ${colors.suspend}
+format-padding = 3%
+
+[module/poweroff]
+type = custom/script
+exec = echo 'Shutdown'
+click-left = poweroff
+label = ""
+format-background = ${colors.primary}
+format-padding = 3%
+
+[module/reboot]
+type = custom/script
+exec = echo 'Reboot'
+click-left = reboot
+label = ""
+format-background = ${colors.reboot}
+format-padding = 3%
+
+[module/batt]
+type = custom/script
+exec = acpi | grep -o "[0-9]*%"
+label = ""
+format-padding = 3%
+
+vim:ft=dosini
