@@ -107,3 +107,7 @@ alias knb='ssh -t virgo05 jupyter notebook --no-browser --port=7654'
 alias zrc="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias dotfiles='/usr/bin/git --git-dir=/home/mick/dotfiles/ --work-tree=/home/mick'
+
+# Simple web tools
+alias weather='curl v2.wttr.in'
+alias cheat='f(){ curl "cheat.sh/$1"; unset -f f; }; f;'
