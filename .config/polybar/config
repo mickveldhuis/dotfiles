@@ -276,7 +276,7 @@ format-padding = 3%
 [module/batt]
 type = custom/script
 exec = acpi | grep -o "[0-9]*%"
-label = ""
+label =  %output%
 format-padding = 3%
 
 vim:ft=dosini

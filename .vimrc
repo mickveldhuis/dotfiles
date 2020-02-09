@@ -21,7 +21,6 @@ Plugin 'tpope/vim-commentary'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
-Plugin 'valloric/youcompleteme'
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme='minimalist'
