@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-    dmenu_run -i -nf '#EC8EFF' -nb '#313131' -sb '#6D1E76' -sf '#EEEEEE' -fn 'monospace-12' -p 'dmenu: '
+    dmenu_run -i -nf '#EC8EFF' -nb '#313131' -sb '#6D1E76' -sf '#EEEEEE' -fn 'Roboto Mono' -p 'dmenu: '
 
 # reload sxhkd configs
 super + Escape

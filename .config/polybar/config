@@ -35,7 +35,7 @@ padding-right = 0
 module-margin = 0
 ;module-margin-right = 2
 
-font-0 = Monospace:pixelsize=12;1
+font-0 = "Roboto Mono:style=Regular:pixelsize=12;1"
 font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
@@ -78,7 +78,7 @@ padding-right = 1
 ;module-margin-left = 2
 ;module-margin-right = 2
 
-font-0 = Monospace:pixelsize=12;1
+font-0 = "Roboto Mono:style=Regular:pixelsize=12;1"
 font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
@@ -121,7 +121,7 @@ foreground = ${colors.foreground}
 module-margin = 0
 ;module-margin-right = 2
 
-font-0 = Monospace:pixelsize=12;1
+font-0 = "Roboto Mono:style=Regular:pixelsize=12;1"
 font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
