@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/mick/.oh-my-zsh"
+export ZSH="/home/mickv/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -106,7 +106,7 @@ alias knb='ssh -t virgo05 jupyter notebook --no-browser --port=7654'
 
 alias zrc="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias dotfiles='/usr/bin/git --git-dir=/home/mick/dotfiles/ --work-tree=/home/mick'
+alias dotfiles='/usr/bin/git --git-dir=/home/mickv/dotfiles.git/ --work-tree=/home/mickv'
 
 # Simple web tools
 alias weather='curl v2.wttr.in'
