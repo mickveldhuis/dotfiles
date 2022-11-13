@@ -10,7 +10,7 @@ reddish=#621100
 killall -s SIGKILL redshift
 
 # AUTOSTART
-compton &
+picom &
 sxhkd &
 ~/.config/polybar/launch.sh
 ~/.fehbg &
@@ -23,18 +23,22 @@ redshift -l 53.22:6.57 &
 # SETUP DEPENDENT SETTINGS #
 # ------------------------ #
 
-case "$DOTS_DEVICE_TYPE" in
-    PC) 
-        bspc monitor HDMI-1 -d I II III IV V 
-        bspc monitor DVI-I-1 -d VI VII VIII IX X
-        ;;
-    LAPTOP)
-        bspc monitor -d I II III IV V 
-        ;;
-    *) 
-        bspc monitor -d I II III IV V VI VII VIII IX X
-        ;;
-esac
+
+bspc monitor HDMI-1 -d I II III IV V 
+bspc monitor HDMI-2 -d VI VII VIII IX X
+
+# case "$DOTS_DEVICE_TYPE" in
+#     PC) 
+#         bspc monitor HDMI-1 -d I II III IV V 
+#         bspc monitor DVI-I-1 -d VI VII VIII IX X
+#         ;;
+#     LAPTOP)
+#         bspc monitor -d I II III IV V 
+#         ;;
+#     *) 
+#         bspc monitor -d I II III IV V VI VII VIII IX X
+#         ;;
+# esac
 
 # -------------------------- #
 # SETUP INDEPENDENT SETTINGS #
