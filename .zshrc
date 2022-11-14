@@ -85,6 +85,9 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+# Add .local/bin to PATH
+PATH=$HOME/.local/bin:$PATH
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 # Setup aliases
@@ -108,6 +111,4 @@ alias zrc="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias dotfiles='/usr/bin/git --git-dir=/home/mickv/dotfiles.git/ --work-tree=/home/mickv'
 
-# Simple web tools
-alias weather='curl v2.wttr.in'
-alias cheat='f(){ curl "cheat.sh/$1"; unset -f f; }; f;'
+alias weather="curl v2.wttr.in"

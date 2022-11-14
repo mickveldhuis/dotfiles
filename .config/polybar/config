@@ -57,7 +57,7 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/rightbar]
-monitor = ${env:MONITOR:DVI-I-1}
+monitor = ${env:MONITOR:HDMI-2}
 width = 100%
 height = 27
 offset-x = 0%
@@ -85,7 +85,7 @@ font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = date suspend reboot poweroff 
+modules-right = pulseaudio togglesink date suspend reboot poweroff 
 
 ;tray-position = right
 ;tray-padding = 2
@@ -149,18 +149,6 @@ label = [ %title:0:30:...% ]
 [module/bspwm]
 type = internal/bspwm
 
-; ws-icon-0 = I;
-; ws-icon-1 = II;
-; ws-icon-2 = III;
-; ws-icon-3 = IV;
-; ws-icon-4 = V;
-; ws-icon-5 = VI;
-; ws-icon-6 = VII;
-; ws-icon-7 = VIII;
-; ws-icon-8 = IX;
-; ws-icon-9 = X; 
-; ws-icon-default = " "
-
 ws-icon-0 = I;
 ws-icon-1 = II;
 ws-icon-2 = III;
@@ -193,19 +181,6 @@ label-empty-padding = 2
 
 enable-scroll = true
 reverse-scroll = false
-
-; [module/check-updates]
-; type = custom/script
-; interval = 1000
-
-; exec = pacman -Qu | wc -l
-; click-left = pacman -Qu | wc -l
-
-; format-prefix = " "
-; label = %output%
-
-; format-margin = 2
-; format-padding = 1%
 
 [module/cpu]
 type = internal/cpu
@@ -249,13 +224,31 @@ label = %time%
 
 format-margin = 2
 
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = false
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+
+label-muted =  muted
+label-muted-foreground = #666
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+click-right = pavucontrol
+
+format-volume-margin = 2
+
 [module/suspend]
 type = custom/script
 exec = echo 'Suspend'
 click-left = systemctl suspend
 label = ""
 format-background = ${colors.suspend}
-format-padding = 3%
+format-padding = 3
 
 [module/poweroff]
 type = custom/script
@@ -263,7 +256,7 @@ exec = echo 'Shutdown'
 click-left = poweroff
 label = ""
 format-background = ${colors.primary}
-format-padding = 3%
+format-padding = 3
 
 [module/reboot]
 type = custom/script
@@ -271,12 +264,19 @@ exec = echo 'Reboot'
 click-left = reboot
 label = ""
 format-background = ${colors.reboot}
-format-padding = 3%
+format-padding = 3
 
 [module/batt]
 type = custom/script
 exec = acpi | grep -o "[0-9]*%"
 label = ""
-format-padding = 3%
+format-padding = 3
 
-vim:ft=dosini
+[module/togglesink]
+type = custom/script
+exec = ~/.config/polybar/scripts/current-sink.sh
+click-left = ~/.config/polybar/scripts/toggle-sink.sh
+label = " %output%"
+
+format-margin = 2
+tail = true
