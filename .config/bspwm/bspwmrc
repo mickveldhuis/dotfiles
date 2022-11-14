@@ -10,7 +10,7 @@ reddish=#621100
 killall -s SIGKILL redshift
 
 # AUTOSTART
-compton &
+picom &
 sxhkd &
 ~/.config/polybar/launch.sh
 ~/.fehbg &

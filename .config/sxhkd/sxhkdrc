@@ -16,7 +16,7 @@ super + Escape
 
 # lock the screen
 super + alt + l
-	dm-tool locker
+	dm-tool lock
 	
 #################
 # bspwm hotkeys #
