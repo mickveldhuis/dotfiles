@@ -1,0 +1,50 @@
+@define-color mainbg #282828;
+
+window {
+    opacity: 1;
+    border: 0;
+    border-radius: 10px;
+    font-family: "Fira Code", monospace;
+    font-size: 18px;
+}
+
+#input {
+	border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+    margin: 0px;
+    font-size: 20px;
+	color: #b27cc0;
+	background-color: #5a5a5a;
+}
+
+#inner-box {
+	margin: 0px;
+	color: #cab3d0;
+	background-color: @mainbg;
+}
+
+#outer-box {
+	margin: 0px;
+	background-color: @mainbg;
+    border-radius: 10px;
+}
+
+#selected {
+	background-color: #726087;
+}
+
+#entry {
+	padding: 0px;
+    margin: 0px;
+	background-color: @mainbg;
+}
+
+#scroll {
+	margin: 5px;
+	background-color: @mainbg;
+}
+
+#text {
+	margin: 0px;
+	padding: 2px 2px 2px 10px;
+}
