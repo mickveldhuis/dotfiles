@@ -112,3 +112,5 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias dotfiles='/usr/bin/git --git-dir=/home/mick/dotfiles.git/ --work-tree=/home/mick'
 
 alias weather="curl v2.wttr.in"
+
+[ -f "/home/mick/.ghcup/env" ] && source "/home/mick/.ghcup/env" # ghcup-env

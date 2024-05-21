@@ -17,6 +17,8 @@ sxhkd &
 light-locker &
 redshift -l 53.22:6.57 &
 
+dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+
 # BSPWM CONFIG
 
 # ------------------------ #
