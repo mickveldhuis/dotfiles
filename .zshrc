@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/mickv/.oh-my-zsh"
+export ZSH="/home/mick/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -91,6 +91,7 @@ PATH=$HOME/.local/bin:$PATH
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 # Setup aliases
+alias vim='nvim'
 alias ls='exa --color=always'
 alias bsprc='vim ~/.config/bspwm/bspwmrc'
 alias sxrc='vim ~/.config/sxhkd/sxhkdrc'
@@ -109,5 +110,8 @@ alias knb='ssh -t virgo05 jupyter notebook --no-browser --port=7654'
 
 alias zrc="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias dotfiles='/usr/bin/git --git-dir=/home/mickv/dotfiles.git/ --work-tree=/home/mickv'
+alias dotfiles='/usr/bin/git --git-dir=/home/mick/dotfiles.git/ --work-tree=/home/mick'
 alias weather="curl v2.wttr.in"
+
+# zoxide
+eval "$(zoxide init zsh)"
