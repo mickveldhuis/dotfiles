@@ -114,3 +114,5 @@ alias dotfiles='/usr/bin/git --git-dir=/home/mick/dotfiles.git/ --work-tree=/hom
 alias weather="curl v2.wttr.in"
 
 [ -f "/home/mick/.ghcup/env" ] && source "/home/mick/.ghcup/env" # ghcup-env
+
+eval "$(zoxide init zsh)"

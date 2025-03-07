@@ -59,7 +59,25 @@
         "format": "{icon}",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "on-click": "activate"
+        "on-click": "activate",
+        // "persistent-workspaces": {
+        //     "*": 5,
+        // },
+        // "format-icons": {
+        //     "1": "",
+        //     "2": "",
+        //     "3": "",
+        //     "4": "",
+        //     "5": "",
+        //     "6": "",
+        //     "7": "",
+        //     "8": "",
+        //     "9": "",
+        //     "10": "",
+        //     "urgent": "",
+        //     "focused": "",
+        //     "default": ""
+        // }
     },
     "hyprland/window": {
         "max-length": 40,
@@ -72,9 +90,18 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y/%m/%d}"
+        "format": "{:%H:%M} ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y/%m/%d} ",
+        // "format-alt": "{:%Y/%m/%d} ",
+        "calendar": {
+            "on-scroll": 1,
+            "weeks-pos": "left",
+            "format": {
+                "weeks": "<span color='#c892e8'><b>W{}</b></span>",
+                "today": "<span color='#c892e8'><b><u>{}</u></b></span>"
+            }
+        }
     },
     "cpu": {
         "format": "{usage}% ",
@@ -151,9 +178,9 @@
         // },
         "modules": [
             "custom/power", // First element is the "group leader" and won't ever be hidden
-            "custom/quit",
+            "custom/reboot",
             "custom/lock",
-            "custom/reboot"
+            "custom/quit"
         ]
     },
     "custom/quit": {
