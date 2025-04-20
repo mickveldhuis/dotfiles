@@ -68,7 +68,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions virtualenv colorize emoji)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting virtualenv colorize emoji)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -94,7 +94,7 @@ PATH=$HOME/.local/bin:$PATH
 # Setup aliases
 alias vim="nvim"
 
-#alias ls='eza --color=always' # Package not available...
+alias ls='eza --color=always'
 alias zrc="vim ~/.zshrc"
 alias dotfiles='/usr/bin/git --git-dir=/home/mick/.dotfiles/ --work-tree=/home/mick'
 
