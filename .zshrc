@@ -68,7 +68,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions virtualenvwrapper virtualenv colorize emoji)
+plugins=(git zsh-autosuggestions virtualenv colorize emoji)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -90,26 +90,13 @@ PATH=$HOME/.local/bin:$PATH
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-# Setup aliases
-alias ls='exa --color=always'
-alias bsprc='vim ~/.config/bspwm/bspwmrc'
-alias sxrc='vim ~/.config/sxhkd/sxhkdrc'
-alias poly='vim ~/.config/polybar/config'
-alias brc='vim ~/.bashrc'
-alias rrc='vim ~/.config/rofi/config'
-alias vrc='vim ~/.vimrc'
- 
-alias ga='git add --all'
-alias gs='git status'
-alias gpush='git push origin master'
-alias gc='git commit'
- 
-alias kfw='ssh -N -L localhost:6543:localhost:7654 virgo05'
-alias knb='ssh -t virgo05 jupyter notebook --no-browser --port=7654'
 
+# Setup aliases
+alias vim="nvim"
+
+#alias ls='eza --color=always' # Package not available...
 alias zrc="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias dotfiles='/usr/bin/git --git-dir=/home/mick/dotfiles.git/ --work-tree=/home/mick'
+alias dotfiles='/usr/bin/git --git-dir=/home/mick/.dotfiles/ --work-tree=/home/mick'
 
 alias weather="curl v2.wttr.in"
 
