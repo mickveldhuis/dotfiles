@@ -19,20 +19,13 @@ These are my configuration files, at least those that do matter.
 Run the following shell commands to install the dotfiles:
 
 ```bash
-alias dotfiles="/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME"
-echo "dotfiles.git" >> .gitignore
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+echo ".dotfiles" >> .gitignore
 
-git clone --bare https://github.com/mickveldhuis/dotfiles.git $HOME/dotfiles.git
+git clone --bare https://github.com/mickveldhuis/dotfiles.git $HOME/.dotfiles
 dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 ```
 
 Also remember to add the alias to your `.zshrc`, `.bashrc`, or whatever shell you might use.
 
-## Screenshots
-
-_Soon?_
-
-## Todo
-
-- Add (initial) program install script
