@@ -5,4 +5,4 @@ end
 
 # Additional exports
 # Example: set -x PATH /home/mick/bin $PATH
-
+set -g fish_greeting
